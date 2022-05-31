@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  --dark-violet: hsl(256, 25%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --light-violet: rgba(50, 30, 105, 0.3);
+
+  --font-body: "Karla", sans-serif;
+  --font-headings: "DM Serif Display", serif;
+
+  --padding-container: 80px 0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+.hero {
+  background-color: var(--dark-violet);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: var(--padding-container);
+}
+
+.nav {
+  background-color: #fff;
+  --padding-container: 0;
+}
+
+.nav__container {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__links {
+  display: none;
+}
+
+.nav__icon,
+.nav__img {
+  display: block;
+}
+
+.hero__main {
+  width: 100%;
+  --padding-container: 0;
+}
+
+.hero__main::before {
+  content: "";
+  display: block;
+  height: 450px;
+  background-image: url("../images/image-intro-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__texts {
+  color: var(--very-light-gray);
+  width: 85%;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-headings);
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.hero__paragraph {
+  line-height: 1.5;
+  margin-top: 1em;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--very-light-gray);
+  border: 1px solid;
+  padding: 0.8em 2em;
+}
+
+.different {
+  text-align: center;
+}
+
+.title--different {
+  color: var(--very-dark-violet);
+  position: relative;
+}
+
+.title--different::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 40%;
+    height: 2px;
+    background-color: var(--light-violet);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
