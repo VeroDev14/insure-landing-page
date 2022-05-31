@@ -157,6 +157,13 @@ body {
   text-align: center;
 }
 
+
+@media (max-width: 368px) {
+    .find__container .title {
+        font-size: 2rem;
+    }
+}
+
 .footer {
   background-color: var(--very-light-gray);
 }
@@ -201,8 +208,8 @@ body {
 }
 
 .footer__link--first {
-    color: var(--dark-grayish-violet);
-    margin-bottom: 1rem;
+  color: var(--dark-grayish-violet);
+  margin-bottom: 1rem;
 }
 
 .attribution {
@@ -212,3 +219,4 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
