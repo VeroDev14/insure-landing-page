@@ -72,7 +72,7 @@ body {
 
 .hero__texts {
   color: var(--very-light-gray);
-  width: 85%;
+  width: 87%;
   margin: 0 auto;
   padding: 80px 0;
   text-align: center;
@@ -80,7 +80,7 @@ body {
 
 .title {
   font-family: var(--font-headings);
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
@@ -109,15 +109,40 @@ body {
 }
 
 .title--different::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 0;
-    right: 0;
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40%;
+  height: 1px;
+  background-color: var(--light-violet);
+}
+
+.different__items {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.different__icon {
+    display: block;
     margin: 0 auto;
-    width: 40%;
-    height: 2px;
-    background-color: var(--light-violet);
+    margin-bottom: 1.5rem;
+}
+
+.different__title {
+    font-family: var(--font-headings);
+    color: var(--very-dark-violet);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.different__paragraph {
+    color: var(--dark-grayish-violet);
+    line-height: 1.5;
 }
 
 .attribution {
