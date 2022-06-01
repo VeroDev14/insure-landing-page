@@ -38,6 +38,11 @@ body {
 .nav {
   background-color: #fff;
   --padding-container: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
 }
 
 .nav__container {
@@ -54,6 +59,49 @@ body {
 .nav__icon,
 .nav__img {
   display: block;
+}
+
+.close {
+  display: none;
+}
+
+.nav__hamburger.show .open {
+  display: none;
+}
+
+.nav__hamburger.show .close {
+  display: block;
+}
+
+.nav__links.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-top: 50px;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  top: 70px;
+  left: 0;
+  background-color: var(--very-dark-violet);
+  z-index: 100;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav__link:last-child {
+  width: 80%;
+  text-align: center;
+  border: 1px solid;
+  padding: 0.8rem 2rem;
 }
 
 .hero__main {
@@ -226,11 +274,16 @@ body {
 }
 
 @media (min-width: 768px) {
+  .hero {
+    position: relative;
+    z-index: 1;
+  }
+
   .nav__links {
     display: block;
   }
 
-  .nav__hamburguer {
+  .nav__hamburger {
     display: none;
   }
 
@@ -241,10 +294,7 @@ body {
   }
 
   .nav__link {
-    text-decoration: none;
     color: var(--dark-grayish-violet);
-    text-transform: uppercase;
-    font-weight: 700;
   }
 
   .nav__link:hover {
@@ -252,8 +302,7 @@ body {
   }
 
   .nav__link:last-child {
-    border: 1px solid;
-    padding: 0.8rem 2rem;
+    width: unset;
     color: var(--dark-violet);
   }
 
@@ -276,13 +325,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    --padding-container: 95px 0;
+    --padding-container: 140px 0 50px 0;
   }
 
   .hero__main::before {
     width: 42%;
-    height: 570px;
+    height: 600px;
     background-image: url("../images/image-intro-desktop.jpg");
+    z-index: -2;
     order: 1;
   }
 
@@ -342,19 +392,6 @@ body {
     --padding-container: 70px 80px;
   }
 
-  .find__container::before {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
-    background-size: cover;
-    background-position: left;
-    top: 0;
-    right: 0;
-    z-index: -1;
-  }
-
   .find__container {
     text-align: left;
     display: flex;
@@ -369,22 +406,25 @@ body {
     padding-top: 0px;
     padding-bottom: 0px;
   }
-  
+
   .footer__brand {
     flex-direction: row;
     justify-content: space-between;
   }
-    
+
   .footer__navigation {
     gap: 1.5rem;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
   }
-  
+
   .footer__nav {
     width: 23%;
     align-items: flex-start;
   }
-  
+
+  .footer__container {
+    position: relative;
+  }
 }

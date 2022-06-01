@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    
     <title>Frontend Mentor | Insure landing page</title>
   </head>
   <body>
@@ -21,11 +22,12 @@
             <img src="./images/logo.svg" alt="Logo Website" class="nav__img" />
           </figure>
 
-          <figure class="nav__hamburguer">
-            <img src="./images/icon-hamburger.svg" class="nav__icon" />
+          <figure class="nav__hamburger" id="hamburger">
+            <img src="./images/icon-hamburger.svg" class="nav__icon open" alt="icon-hamburger" />
+            <img src="./images/icon-close.svg" class="nav__icon close" alt="icon-close" />
           </figure>
 
-          <div class="nav__links">
+          <div class="nav__links" id="menu">
             <a href="#" class="nav__link">How we work</a>
             <a href="#" class="nav__link">Blog</a>
             <a href="#" class="nav__link">Account</a>
@@ -162,5 +164,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Vero Melgarejo</a>.
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
