@@ -99,6 +99,12 @@ body {
   padding: 0.8em 2em;
 }
 
+.cta:hover {
+  color: var(--dark-violet);
+  background-color: var(--very-light-gray);
+  font-weight: 600;
+}
+
 .different {
   text-align: center;
   margin-top: 2.5rem;
@@ -157,11 +163,10 @@ body {
   text-align: center;
 }
 
-
 @media (max-width: 368px) {
-    .find__container .title {
-        font-size: 2rem;
-    }
+  .title--find {
+    font-size: 2rem;
+  }
 }
 
 .footer {
@@ -220,3 +225,166 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+@media (min-width: 768px) {
+  .nav__links {
+    display: block;
+  }
+
+  .nav__hamburguer {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: var(--dark-grayish-violet);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .nav__link:hover {
+    color: var(--very-dark-violet);
+  }
+
+  .nav__link:last-child {
+    border: 1px solid;
+    padding: 0.8rem 2rem;
+    color: var(--dark-violet);
+  }
+
+  .nav__link:last-child:hover {
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-violet);
+    font-weight: 600;
+  }
+
+  .hero {
+    background-image: linear-gradient(
+      to bottom,
+      var(--dark-violet) 80%,
+      #fff 75%
+    );
+  }
+
+  .hero__main {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    --padding-container: 95px 0;
+  }
+
+  .hero__main::before {
+    width: 42%;
+    height: 570px;
+    background-image: url("../images/image-intro-desktop.jpg");
+    order: 1;
+  }
+
+  .hero__texts {
+    position: relative;
+    color: var(--very-light-gray);
+    width: 50%;
+    margin: 0;
+    padding: 20px 0px;
+    text-align: left;
+  }
+
+  .hero__texts::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: var(--very-light-gray);
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 0.9;
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
+
+  .different {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .title--different::before {
+    margin: 0;
+    width: 10%;
+    top: -20px;
+  }
+
+  .different__items {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .different__item {
+    flex: 1;
+  }
+
+  .different__icon {
+    margin-left: 0;
+  }
+
+  .find {
+    position: relative;
+    --padding-container: 70px 80px;
+  }
+
+  .find__container::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+    background-size: cover;
+    background-position: left;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .find__container {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  .title--find {
+    width: 60%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .footer__brand {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    
+  .footer__navigation {
+    gap: 1.5rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .footer__nav {
+    width: 23%;
+    align-items: flex-start;
+  }
+  
+}
