@@ -43,7 +43,7 @@ body {
   background-image: url("../images/bg-pattern-intro-right-mobile.svg");
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -380px;
+  top: 865px;
   right: 0;
   height: 330px;
   width: 124px;
@@ -103,7 +103,7 @@ body {
   gap: 2rem;
   padding-top: 70px;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 70px);
   top: 70px;
   left: 0;
@@ -170,7 +170,7 @@ body {
   text-decoration: none;
   color: var(--very-light-gray);
   border: 1px solid;
-  padding: 0.8em 2em;  
+  padding: 0.8em 2em;
 }
 
 .cta:hover {
@@ -181,7 +181,7 @@ body {
 
 .different {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 3.8rem;
 }
 
 .title--different {
@@ -192,7 +192,7 @@ body {
 .title--different::before {
   content: "";
   position: absolute;
-  top: -25px;
+  top: -45px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -235,6 +235,22 @@ body {
   background-color: var(--dark-violet);
   color: var(--very-light-gray);
   text-align: center;
+  position: relative;
+}
+
+.find__container::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 300px;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  top: 0;
+  right: -30px;
+}
+
+.title--find {
+  font-size: 2.5rem;
 }
 
 @media (max-width: 368px) {
@@ -245,6 +261,18 @@ body {
 
 .footer {
   background-color: var(--very-light-gray);
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0px;
 }
 
 .footer__brand {
@@ -257,10 +285,15 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.footer__picture {
+  z-index: 90;
+}
+
 .footer__contact {
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 90;
 }
 
 .footer__navigation {
